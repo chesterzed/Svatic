@@ -11,9 +11,9 @@ bul = ["Буль.", "Буль!", "Буль... Буль?", "Буль. Буль. �
 
 @bot.message_handler(func=lambda msg: True)
 def echo_all(message):
-    if "Святик" in message.text:
-        bot.reply_to(message, bul[random.randint(0, len(bul))])
+    if "святик" in str(message.text).lower():
+        bot.reply_to(message, bul[random.randint(0, len(bul)-1)])
 
 
-print(random.randint(0, len(bul)))
+print(random.randint(0, len(bul) - 1))
 bot.infinity_polling()
