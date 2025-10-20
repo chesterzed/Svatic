@@ -2,9 +2,9 @@ import random
 import requests
 import json
 import telebot
+import config as cfg
 
-BOT_TOKEN = '6817890701:AAFvaqFYn5T_YvF367VVwRDsqIwLV9BbYkE'
-bot = telebot.TeleBot(BOT_TOKEN)
+bot = telebot.TeleBot(cfg.BOT_TOKEN)
 
 # response = requests.get('https://zenquotes.io/api/random', timeout=10)
 # print(response)
